@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Card = styled.div`
   display: flex;
@@ -57,4 +58,20 @@ export const Badge = styled.div`
     margin-left: 20px;
     background: #eb5757;
   }
+`;
+
+export const LinkComment = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  width: 300px;
+  background: #3d3d4c;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 5px;
+  margin: 50px auto 0;
 `;

@@ -4,7 +4,7 @@ import { FiChevronRight } from 'react-icons/fi';
 import pizzaImg from '../../assets/pizza.svg';
 import Header from '../../Components/Header';
 
-import { Card, Badge } from './styles';
+import { Card, Badge, LinkComment } from './styles';
 
 const Dashboard: React.FC = () => {
   return (
@@ -76,6 +76,8 @@ const Dashboard: React.FC = () => {
           </Badge>
         </div>
       </Card>
+
+      <LinkComment to="/comment">Fazer um comentário</LinkComment>
     </>
   );
 };
