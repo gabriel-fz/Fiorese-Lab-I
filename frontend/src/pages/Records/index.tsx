@@ -25,8 +25,6 @@ const Records: React.FC = () => {
     api.get(`/entidade-texto`).then(response => {
       setComentarios(response.data);
     });
-
-    console.log(comentarios);
   }, []);
 
   return (

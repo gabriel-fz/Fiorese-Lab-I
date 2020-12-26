@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useRef, useCallback } from 'react';
+import { FormHandles } from '@unform/core';
+import { Form } from '@unform/web';
 import { FiChevronLeft } from 'react-icons/fi';
 
 import Header from '../../components/Header';
+import TextArea from '../../components/TextArea';
 
-import { TextArea, Button } from './styles';
+import { Button } from './styles';
+
+interface DataProps {
+  comentario: string;
+}
 
 const Comment: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
+
+  const handleSubmit = useCallback((data: DataProps) => {
+    console.log(data);
+  }, []);
+
   return (
     <>
       <Header title="Comentar" path="/">
@@ -13,11 +26,11 @@ const Comment: React.FC = () => {
         Voltar
       </Header>
 
-      <TextArea>
-        <textarea placeholder="Digite seu comentário" />
-      </TextArea>
+      <Form ref={formRef} onSubmit={handleSubmit}>
+        <TextArea name="comentario" placeholder="Digite seu comentário" />
 
-      <Button type="submit">Enviar</Button>
+        <Button type="submit">Enviar</Button>
+      </Form>
     </>
   );
 };
