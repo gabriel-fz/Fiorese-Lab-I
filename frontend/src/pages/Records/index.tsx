@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
+
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 
 import { Card, Entity } from './styles';
 
+interface EntidadesProps {
+  item: string;
+  sentimento: string;
+}
+
+interface ComentariosProps {
+  id: number;
+  texto: string;
+  entidades: EntidadesProps[];
+}
+
 const Records: React.FC = () => {
+  const [comentarios, setComentarios] = useState<ComentariosProps[]>([]);
+
+  useEffect(() => {
+    api.get(`/entidade-texto`).then(response => {
+      setComentarios(response.data);
+    });
+
+    console.log(comentarios);
+  }, []);
+
   return (
     <>
       <Header title="Comentários" path="/">
@@ -13,73 +36,22 @@ const Records: React.FC = () => {
         Voltar
       </Header>
 
-      <Card>
-        <p>
-          Eu odiei o refrigerante que veio amassado. Porém, a pizza de frango
-          com catupiry estava muito gostosa
-        </p>
+      {comentarios.map(comentario => (
+        <Card key={comentario.id}>
+          <p>{comentario.texto}</p>
 
-        <hr />
+          <hr />
 
-        <div>
-          <Entity isPositive>
-            <div />
-            <span>Refrigerante</span>
-          </Entity>
-
-          <Entity isPositive={false}>
-            <div />
-            <span>Suco</span>
-          </Entity>
-        </div>
-      </Card>
-
-      <Card>
-        <p>
-          Eu odiei o refrigerante que veio amassado. Porém, a pizza de frango
-          com catupiry estava muito gostosa
-        </p>
-
-        <hr />
-
-        <div>
-          <Entity isPositive>
-            <div />
-            <span>Refrigerante</span>
-          </Entity>
-
-          <Entity isPositive={false}>
-            <div />
-            <span>Suco</span>
-          </Entity>
-        </div>
-      </Card>
-
-      <Card>
-        <p>
-          Eu odiei o refrigerante que veio amassado. Porém, a pizza de frango
-          com catupiry estava muito gostosa
-        </p>
-
-        <hr />
-
-        <div>
-          <Entity isPositive>
-            <div />
-            <span>Refrigerante</span>
-          </Entity>
-
-          <Entity isPositive={false}>
-            <div />
-            <span>Suco</span>
-          </Entity>
-
-          <Entity isPositive={false}>
-            <div />
-            <span>Pizza de calabresa</span>
-          </Entity>
-        </div>
-      </Card>
+          <div>
+            {comentario.entidades.map(entidade => (
+              <Entity sentiment={entidade.sentimento}>
+                <div />
+                <span>{entidade.item}</span>
+              </Entity>
+            ))}
+          </div>
+        </Card>
+      ))}
     </>
   );
 };

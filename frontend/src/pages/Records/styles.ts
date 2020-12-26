@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface EntityProps {
-  isPositive: boolean;
+  sentiment: string;
 }
 
 export const Card = styled.div`
@@ -45,7 +45,8 @@ export const Entity = styled.div<EntityProps>`
     width: 10px;
     border-radius: 50%;
     margin-right: 8px;
-    background: ${props => (props.isPositive ? '#27ae60' : '#eb5757')};
+    background: ${props =>
+      props.sentiment === 'positive' ? '#27ae60' : '#eb5757'};
   }
 
   span {
