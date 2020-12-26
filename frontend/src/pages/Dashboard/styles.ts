@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+interface BadgeProps {
+  isPositive: boolean;
+}
+
 export const Card = styled.div`
   display: flex;
   align-items: center;
@@ -30,14 +34,15 @@ export const Card = styled.div`
   }
 `;
 
-export const Badge = styled.div`
+export const Badge = styled.div<BadgeProps>`
   display: flex;
   align-items: center;
 
   width: 140px;
   padding: 2px 2px;
   border-radius: 50px;
-  background: #27ae60;
+  background: ${props => (props.isPositive ? '#27ae60' : '#eb5757')};
+  margin-left: 20px;
 
   div {
     display: flex;
@@ -53,11 +58,6 @@ export const Badge = styled.div`
     strong {
       font-weight: bold;
     }
-  }
-
-  & + div {
-    margin-left: 20px;
-    background: #eb5757;
   }
 `;
 

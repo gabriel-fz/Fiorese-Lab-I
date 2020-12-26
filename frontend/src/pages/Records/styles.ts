@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 interface EntityProps {
   isPositive: boolean;
@@ -43,18 +43,9 @@ export const Entity = styled.div<EntityProps>`
   div {
     height: 10px;
     width: 10px;
-    background: red;
     border-radius: 50%;
     margin-right: 8px;
-
-    ${props =>
-      props.isPositive
-        ? css`
-            background: #27ae60;
-          `
-        : css`
-            background: #eb5757;
-          `}
+    background: ${props => (props.isPositive ? '#27ae60' : '#eb5757')};
   }
 
   span {

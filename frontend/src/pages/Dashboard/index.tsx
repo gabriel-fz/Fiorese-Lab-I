@@ -19,14 +19,14 @@ const Dashboard: React.FC = () => {
         <strong>Pizza de Frango com Catupiry</strong>
 
         <div>
-          <Badge>
+          <Badge isPositive>
             <div>
               <strong>10</strong>
             </div>
             <strong>Positivos</strong>
           </Badge>
 
-          <Badge>
+          <Badge isPositive={false}>
             <div>
               <strong>10</strong>
             </div>
@@ -40,14 +40,14 @@ const Dashboard: React.FC = () => {
         <strong>Pizza de Calabresa</strong>
 
         <div>
-          <Badge>
+          <Badge isPositive>
             <div>
               <strong>10</strong>
             </div>
             <strong>Positivos</strong>
           </Badge>
 
-          <Badge>
+          <Badge isPositive={false}>
             <div>
               <strong>10</strong>
             </div>
@@ -61,14 +61,14 @@ const Dashboard: React.FC = () => {
         <strong>Pizza de Portuguesa</strong>
 
         <div>
-          <Badge>
+          <Badge isPositive>
             <div>
               <strong>10</strong>
             </div>
             <strong>Positivos</strong>
           </Badge>
 
-          <Badge>
+          <Badge isPositive={false}>
             <div>
               <strong>10</strong>
             </div>
