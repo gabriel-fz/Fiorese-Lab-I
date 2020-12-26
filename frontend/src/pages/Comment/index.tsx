@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiChevronLeft } from 'react-icons/fi';
 
-import Header from '../../Components/Header';
+import Header from '../../components/Header';
 
 import { TextArea, Button } from './styles';
 

@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import api from '../../services/api';
 
 import pizzaImg from '../../assets/pizza.svg';
-import Header from '../../Components/Header';
+import Header from '../../components/Header';
 
 import { Card, Badge, LinkComment } from './styles';
 
+interface EntidadesProps {
+  id: number;
+  nome: string;
+  positivos: string;
+  negativos: string;
+}
+
 const Dashboard: React.FC = () => {
+  const [entidades, setEntidades] = useState<EntidadesProps[]>([]);
+
+  useEffect(() => {
+    api.get(`/apenas-entidade`).then(response => {
+      setEntidades(response.data);
+    });
+  }, []);
+
   return (
     <>
       <Header title="Itens analizados" path="/records">
@@ -14,68 +30,28 @@ const Dashboard: React.FC = () => {
         <FiChevronRight size={20} />
       </Header>
 
-      <Card>
-        <img src={pizzaImg} alt="pizza" />
-        <strong>Pizza de Frango com Catupiry</strong>
+      {entidades.map(entidade => (
+        <Card key={entidade.id}>
+          <img src={pizzaImg} alt="pizza" />
+          <strong>{entidade.nome}</strong>
 
-        <div>
-          <Badge isPositive>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Positivos</strong>
-          </Badge>
+          <div>
+            <Badge isPositive>
+              <div>
+                <strong>{entidade.positivos}</strong>
+              </div>
+              <strong>Positivos</strong>
+            </Badge>
 
-          <Badge isPositive={false}>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Negativos</strong>
-          </Badge>
-        </div>
-      </Card>
-
-      <Card>
-        <img src={pizzaImg} alt="pizza" />
-        <strong>Pizza de Calabresa</strong>
-
-        <div>
-          <Badge isPositive>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Positivos</strong>
-          </Badge>
-
-          <Badge isPositive={false}>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Negativos</strong>
-          </Badge>
-        </div>
-      </Card>
-
-      <Card>
-        <img src={pizzaImg} alt="pizza" />
-        <strong>Pizza de Portuguesa</strong>
-
-        <div>
-          <Badge isPositive>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Positivos</strong>
-          </Badge>
-
-          <Badge isPositive={false}>
-            <div>
-              <strong>10</strong>
-            </div>
-            <strong>Negativos</strong>
-          </Badge>
-        </div>
-      </Card>
+            <Badge isPositive={false}>
+              <div>
+                <strong>{entidade.negativos}</strong>
+              </div>
+              <strong>Negativos</strong>
+            </Badge>
+          </div>
+        </Card>
+      ))}
 
       <LinkComment to="/comment">Fazer um comentário</LinkComment>
     </>
