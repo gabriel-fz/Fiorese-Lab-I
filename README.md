@@ -21,7 +21,7 @@ Os Labs tem como intuito principal a diversão através da programação e a pr�
 
 Através do frontend é possível fazer requisições POST para enviar comentários para a API, que por sua vez conectada ao modelo treinado, analizaria o comentário e identificaria as entidades juntamente com suas respectivas emoções (positiva ou negativa). Com isso, o comentário e as entidades encontradas são salvas no banco de dados para que o frontend também possa fazer requisições GET para receber todos os dados salvos. Na imagem a seguir, é possível observar melhor como seria o funcionamento.
 
-<img alt="Arquitetura" src="https://raw.githubusercontent.com/gabriel-fz/Fiorese-Lab-I/blob/master/assets/arquitetura.png" />
+<img alt="Arquitetura" src="https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/assets/arquitetura.png" />
 
 ## :rocket: O que eu utilizei
 
