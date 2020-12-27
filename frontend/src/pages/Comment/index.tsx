@@ -3,6 +3,8 @@ import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import { FiChevronLeft } from 'react-icons/fi';
 
+import api from '../../services/api';
+
 import Header from '../../components/Header';
 import TextArea from '../../components/TextArea';
 
@@ -15,8 +17,16 @@ interface DataProps {
 const Comment: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback((data: DataProps) => {
-    console.log(data);
+  const handleSubmit = useCallback(async (data: DataProps) => {
+    try {
+      if (data.comentario === '') {
+        throw new Error();
+      }
+
+      await api.post('/comentar', data);
+    } catch {
+      console.log('Erro ao enviar o arquivo');
+    }
   }, []);
 
   return (
