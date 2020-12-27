@@ -19,6 +19,14 @@ Os Labs tem como intuito principal a diversão através da programação e a pr�
 
 ## :rocket: Esboço do projeto
 
+### :art: Layout
+
+O layout foi criado por mim utilizando o Figma, e está disponível no seguinte link:
+
+- [https://www.figma.com/file/mXD0nbNoQveOCezNKhfnV2/pizzaria-Colors?node-id=0%3A1](https://www.figma.com/file/mXD0nbNoQveOCezNKhfnV2/pizzaria-Colors?node-id=0%3A1)
+
+### :triangular_ruler: Arquitetura
+
 Através do frontend é possível fazer requisições POST para enviar comentários para a API, que por sua vez conectada ao modelo treinado, analizaria o comentário e identificaria as entidades juntamente com suas respectivas emoções (positiva ou negativa). Com isso, o comentário e as entidades encontradas são salvas no banco de dados para que o frontend também possa fazer requisições GET para receber todos os dados salvos. Na imagem a seguir, é possível observar melhor como seria o funcionamento.
 
 <img alt="Arquitetura" src="https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/assets/arquitetura.png" />
