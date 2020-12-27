@@ -15,4 +15,8 @@ export const Button = styled.button`
   border-radius: 5px;
   border: none;
   margin: 50px auto 0;
+
+  &:disabled {
+    background: #c4c4c4;
+  }
 `;

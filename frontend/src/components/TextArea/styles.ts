@@ -1,12 +1,22 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  error: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
 
   background: #fff;
   padding: 20px 30px;
   height: 150px;
   border-radius: 5px;
+
+  ${props =>
+    props.error &&
+    css`
+      border: 3px solid #eb5757;
+    `}
 
   textarea {
     display: flex;

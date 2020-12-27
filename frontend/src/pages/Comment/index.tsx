@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import { FiChevronLeft } from 'react-icons/fi';
@@ -17,7 +17,12 @@ interface DataProps {
 const Comment: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
+  const [error, setError] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const handleSubmit = useCallback(async (data: DataProps) => {
+    setDisabled(true);
+    setError(false);
     try {
       if (data.comentario === '') {
         throw new Error();
@@ -26,7 +31,9 @@ const Comment: React.FC = () => {
       await api.post('/comentar', data);
     } catch {
       console.log('Erro ao enviar o arquivo');
+      setError(true);
     }
+    setDisabled(false);
   }, []);
 
   return (
@@ -37,9 +44,15 @@ const Comment: React.FC = () => {
       </Header>
 
       <Form ref={formRef} onSubmit={handleSubmit}>
-        <TextArea name="comentario" placeholder="Digite seu comentário" />
+        <TextArea
+          name="comentario"
+          placeholder="Digite seu comentário"
+          error={error}
+        />
 
-        <Button type="submit">Enviar</Button>
+        <Button type="submit" disabled={disabled}>
+          Enviar
+        </Button>
       </Form>
     </>
   );

@@ -6,9 +6,10 @@ import { Container } from './styles';
 
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
+  error: boolean;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ name, ...rest }) => {
+const TextArea: React.FC<TextAreaProps> = ({ name, error, ...rest }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { fieldName, defaultValue, registerField } = useField(name);
 
@@ -21,7 +22,7 @@ const TextArea: React.FC<TextAreaProps> = ({ name, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <Container>
+    <Container error={error}>
       <textarea value={defaultValue} ref={textareaRef} {...rest} />
     </Container>
   );
