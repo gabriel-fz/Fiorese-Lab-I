@@ -32,6 +32,7 @@ export const Card = styled.div`
   div {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 `;
 
