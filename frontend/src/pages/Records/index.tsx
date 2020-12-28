@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FiChevronLeft } from 'react-icons/fi';
 
 import api from '../../services/api';
 
@@ -29,10 +28,7 @@ const Records: React.FC = () => {
 
   return (
     <>
-      <Header title="Comentários" path="/">
-        <FiChevronLeft size={20} />
-        Voltar
-      </Header>
+      <Header title="Comentar" path="/" textLink="Voltar" icon="left" />
 
       {comentarios.map(comentario => (
         <Card key={comentario.id}>

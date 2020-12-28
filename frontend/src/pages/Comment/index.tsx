@@ -1,7 +1,6 @@
 import React, { useRef, useCallback, useState } from 'react';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
-import { FiChevronLeft } from 'react-icons/fi';
 
 import api from '../../services/api';
 
@@ -42,10 +41,7 @@ const Comment: React.FC = () => {
 
   return (
     <>
-      <Header title="Comentar" path="/">
-        <FiChevronLeft size={20} />
-        Voltar
-      </Header>
+      <Header title="Comentar" path="/" textLink="Voltar" icon="left" />
 
       <Form ref={formRef} onSubmit={handleSubmit}>
         <TextArea
