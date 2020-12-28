@@ -22,7 +22,7 @@ const TextArea: React.FC<TextAreaProps> = ({ name, error, ...rest }) => {
   }, [fieldName, registerField]);
 
   return (
-    <Container error={error}>
+    <Container data-testid="textarea-container" error={error}>
       <textarea value={defaultValue} ref={textareaRef} {...rest} />
     </Container>
   );
