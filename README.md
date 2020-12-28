@@ -66,7 +66,9 @@ Através do frontend é possível fazer requisições POST para enviar comentár
 
 ## :rocket: O que eu utilizei
 
-- [Node](https://nodejs.org/en/)
+- [Node-RED](https://nodered.org/)
+- [Watson Knowledge Studio](https://www.ibm.com/br-pt/cloud/watson-knowledge-studio)
+- [Watson Natural Language Understanding](https://www.ibm.com/br-pt/cloud/watson-natural-language-understanding)
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Styled-Components](https://styled-components.com/)
@@ -111,7 +113,25 @@ Inicialmente, verifique se seu editor de código está utilizando versões mais 
 
 Verifique também se a API se encontra disponível no ar. No readme da pasta `api` estão descritos todos os passos para a criação da api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED.
 
-Após isso, abra a pasta `frontend` no terminal e execute o seguinte comando para poder rodar o app:
+Agora vá até a pasta `frontend/src/config` e crie um arquivo com o nome de `apiConfig.ts`. Neste arquivo, cole o seguinte código abaixo e altere o os três asteriscos pela URL da sua API:
+
+```
+const apiConfig =
+  'https://cors-anywhere.herokuapp.com/***;
+
+export default apiConfig;
+```
+
+O arquivo ficará mais ou menos assim:
+
+```
+const apiConfig =
+  'https://cors-anywhere.herokuapp.com/https://link-da-sua-api.mybluemix.net;
+
+export default apiConfig;
+```
+
+Com todas as configurações feitas, abra a pasta `frontend` no terminal e execute o seguinte comando para poder rodar o app:
 
 ```
 yarn start
