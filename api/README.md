@@ -101,3 +101,12 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
   }
 ]
 ```
+
+## Videos de material de apoio
+
+Todos os vídeos à seguir foram retirados do [canal do Sérgio Gama](https://www.youtube.com/c/SergioGama/featured), e neles é mostrado de forma prática como treinar modelos costumizados no WKS e como criar e usar uma api no Node-RED:
+
+- [How to read IoT Data using MQTT on Node-Red, and consume it on Jupyter Notebook with Pandas on CP4D](https://www.youtube.com/watch?v=yT_DIEu6uzA&t=1121s&ab_channel=SergioGama)
+- [Creating a custom model on WKS and deploy it to NLU, use it thru API on Node-red and Cloud Functions](https://www.youtube.com/watch?v=Nqyd5rJ0KJU&t=1599s&ab_channel=SergioGama)
+- [Criando Rest API Post no Node-red, multipart recebendo arquivo, e testando no Postman](https://www.youtube.com/watch?v=QQt9lZF4SQQ&t=327s&ab_channel=SergioGama)
+- [https://www.youtube.com/watch?v=UyPVl7epAnU&t=87s&ab_channel=SergioGama](https://www.youtube.com/watch?v=UyPVl7epAnU&t=87s&ab_channel=SergioGama)
