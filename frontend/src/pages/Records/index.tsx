@@ -42,7 +42,7 @@ const Records: React.FC = () => {
 
           <div>
             {comentario.entidades.map(entidade => (
-              <Entity sentiment={entidade.sentimento}>
+              <Entity key={entidade.item} sentiment={entidade.sentimento}>
                 <div />
                 <span>{entidade.item}</span>
               </Entity>

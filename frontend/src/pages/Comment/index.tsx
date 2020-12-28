@@ -35,7 +35,6 @@ const Comment: React.FC = () => {
 
       setSuccess(true);
     } catch {
-      console.log('Erro ao enviar o arquivo');
       setError(true);
     }
     setDisabled(false);
