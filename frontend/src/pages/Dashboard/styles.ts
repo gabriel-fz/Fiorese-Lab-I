@@ -32,6 +32,25 @@ export const Card = styled.div`
   & + div {
     margin-top: 20px;
   }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      display: none;
+    }
+
+    > strong {
+      text-align: center;
+    }
+
+    > div {
+      justify-content: center;
+
+      margin-top: 15px;
+    }
+  }
 `;
 
 export const Badge = styled.div<BadgeProps>`
@@ -42,7 +61,6 @@ export const Badge = styled.div<BadgeProps>`
   padding: 2px 2px;
   border-radius: 50px;
   background: ${props => (props.isPositive ? '#27ae60' : '#eb5757')};
-  margin-left: 20px;
 
   div {
     display: flex;
@@ -58,6 +76,10 @@ export const Badge = styled.div<BadgeProps>`
     strong {
       font-weight: bold;
     }
+  }
+
+  & + div {
+    margin-left: 20px;
   }
 `;
 

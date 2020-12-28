@@ -23,6 +23,8 @@ export const Container = styled.div`
   @media (max-width: 520px) {
     flex-direction: column;
 
+    margin-bottom: 30px;
+
     h1 {
       font-size: 30px;
       margin-bottom: 10px;
