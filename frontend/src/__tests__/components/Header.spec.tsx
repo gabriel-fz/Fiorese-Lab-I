@@ -14,9 +14,12 @@ jest.mock('react-router-dom', () => {
 describe('Header Component', () => {
   it('Espero que component Header seja renderizado', () => {
     const { getByText } = render(
-      <Header title="Itens analizados" path="/records">
-        Ver comentários
-      </Header>,
+      <Header
+        title="Itens analizados"
+        path="/records"
+        textLink="Ver comentários"
+        icon="right"
+      />,
     );
 
     expect(getByText('Itens analizados')).toBeTruthy();
