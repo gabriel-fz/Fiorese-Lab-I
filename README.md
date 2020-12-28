@@ -15,7 +15,23 @@
 
 ## :rocket: Sobre o Lab I
 
-Os Labs tem como intuito principal a diversão através da programação e a prática de tudo o que eu aprendo sobre desenvolvimento no dia a dia. Neste projeto em específico, eu crio uma api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED para analizar comentários de avalizações de aplicativos de delivery, onde busco sobre quais itens a pessoa criticou e elogiou. Ao final, crio um projeto em React para poder enviar comentários, mostrar todos os itens que foram mais elogiados e mais criticados, e todos os comentários então feitos.
+Os Labs tem como intuito principal a diversão através da programação e a prática de tudo o que eu aprendo sobre desenvolvimento no dia a dia. Para isso, imagino possíveis problemas que seriam legais de resolver, como o problema a seguir:
+
+### O problema
+
+Imagine que em um aplicativo de delivery, a pessoa pede apenas uma pizza e depois avalia com apenas uma estrela. Podemos presumir então que a pessoa não gostou da pizza, já que foi a única coisa que ela pediu.
+
+Porém, imagine agora que a pessoa pediu uma pizza de calabresa, uma pizza portuguesa e um refrigerante, e avaliou o pedido com uma estrela e com o seguinte comentário:
+
+```
+A pizza de calabresa e a pizza de  portuguesa estavam ótimas, não é atoa que são as minhas preferidas dessa pizzaria. Porém, odiei que os refrigerantes tenham vindo com as latas todas amassadas. Essa pizzaria precisa rever os cuidados que estão tendo com seus produtos!
+```
+
+Ao ler o comentário, podemos observar que a pessoa elogiou as pizzas e criticou o refrigerante, o que fez com que ela avaliasse com apenas uma estrela o pedido. Até aí tudo bem, pois só se trata de uma avaliação, porém, quando há um número muito grande de pedidos é inviável ler todos de modo com que seja necessário automatizar esse processo. Para isso então, surge a solução a segui:
+
+### A solução
+
+Neste projeto eu criei uma api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED para analisar comentários de avalizações de aplicativos de delivery, onde busco sobre quais itens a pessoa elogiou e criticou. Ao final, crio um projeto em React para poder enviar comentários, mostrar todos os itens que foram mais elogiados e mais criticados, e todos os comentários então feitos. Com isso então, é possível analisar quantidades enormes de comentários de maneira automática e sem precisar de nenhum esforço humano.
 
 ## :rocket: Esboço do projeto
 
@@ -27,7 +43,7 @@ O layout foi criado por mim utilizando o Figma, e está disponível no seguinte 
 
 ### :triangular_ruler: Arquitetura
 
-Através do frontend é possível fazer requisições POST para enviar comentários para a API, que por sua vez conectada ao modelo treinado, analizaria o comentário e identificaria as entidades juntamente com suas respectivas emoções (positiva ou negativa). Com isso, o comentário e as entidades encontradas são salvas no banco de dados para que o frontend também possa fazer requisições GET para receber todos os dados salvos. Na imagem a seguir, é possível observar melhor como seria o funcionamento.
+Através do frontend é possível fazer requisições POST para enviar comentários para a API, que por sua vez conectada ao modelo treinado, analisaria o comentário e identificaria as entidades juntamente com suas respectivas emoções (positiva ou negativa). Com isso, o comentário e as entidades encontradas são salvas no banco de dados para que o frontend também possa fazer requisições GET para receber todos os dados salvos. Na imagem a seguir, é possível observar melhor como seria o funcionamento.
 
 <img alt="Arquitetura" src="https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/assets/arquitetura.png" />
 
