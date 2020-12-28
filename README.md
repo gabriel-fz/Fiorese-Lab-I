@@ -111,7 +111,7 @@ Ou então, baixe este repositório zipado e descompacte ele dentro da pasta de s
 
 Inicialmente, verifique se seu editor de código está utilizando versões mais recentes do Typescrip do que a versão `4.0.3`. No Visual Studio Code por exemplo, é possível que essa versão seja escolhida automaticamente gerando erros no código. Para resolver este problema (no VSCode) caso tenha, basta digitar `Ctrl + shift + p`, procurar por `Typescrip: select typescript version` e selecionar uma versão **diferente** da versão `4.0.3`.
 
-Verifique também se a API se encontra disponível no ar. No readme da pasta `api` estão descritos todos os passos para a criação da api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED.
+Verifique também se a API se encontra disponível no ar. No [readme](https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/api/README.md) da pasta `api` estão descritos todos os passos para a criação da api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED.
 
 Agora vá até a pasta `frontend/src/config` e crie um arquivo com o nome de `apiConfig.ts`. Neste arquivo, cole o seguinte código abaixo e altere o os três asteriscos pela URL da sua API:
 
