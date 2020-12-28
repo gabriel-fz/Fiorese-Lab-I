@@ -1,6 +1,6 @@
-<h3 align="center">
+<h2 align="center">
   Fiorese Lab I
-</h3>
+</h2>
 
 <p align="center">
   <a href="#rocket-sobre-o-lab-i">Sobre o Lab I</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -66,8 +66,71 @@ Através do frontend é possível fazer requisições POST para enviar comentár
 
 ## :rocket: O que eu utilizei
 
-(disponível após conclusão do projeto)
+- [Node](https://nodejs.org/en/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-Components](https://styled-components.com/)
+- [Unform](https://unform.dev/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Axios](https://github.com/axios/axios)
+- [React-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [Jest](https://jestjs.io/)
+- [React testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
-## :rocket: Instalação e execução
+## :rocket: Instalação, execução e testes
 
-(disponível após conclusão do projeto)
+A seguir, estão descritos todos os passos para a instalação, execução e testes.
+
+### :memo: Pré-requisitos
+
+- [Node](https://nodejs.org/en/)
+- [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install#debian-stable)(ou npm)
+- [Json-server](https://github.com/typicode/json-server)
+- [Git](https://git-scm.com/downloads) (Opcional)
+
+(Caso esteja utilizando o VS Code, é desejável ter essas extensões:)
+
+- [ESLint](https://eslint.org/)
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [Prettier](https://prettier.io/)
+
+### :octocat: Clonando o repositório
+
+Abra em sua máquina uma pasta de sua preferência. Em seguida, abra o terminal de sua máquina na respectiva pasta e rode o seguinte comando:
+
+```
+$ git clone https://github.com/gabriel-fz/Fiorese-Lab-I.git
+```
+
+Ou então, baixe este repositório zipado e descompacte ele dentro da pasta de sua preferência.
+
+### :computer: Executando
+
+Inicialmente, verifique se seu editor de código está utilizando versões mais recentes do Typescrip do que a versão `4.0.3`. No Visual Studio Code por exemplo, é possível que essa versão seja escolhida automaticamente gerando erros no código. Para resolver este problema (no VSCode) caso tenha, basta digitar `Ctrl + shift + p`, procurar por `Typescrip: select typescript version` e selecionar uma versão **diferente** da versão `4.0.3`.
+
+Verifique também se a API se encontra disponível no ar. No readme da pasta `api` estão descritos todos os passos para a criação da api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED.
+
+Após isso, abra a pasta `frontend` no terminal e execute o seguinte comando para poder rodar o app:
+
+```
+yarn start
+```
+
+Com isso, será aberto em uma aba do seu navegador a página referente aos layouts presentes no figma.
+
+### :ballot_box_with_check: Rodando os testes
+
+Os testes se encontram presentes na pasta `frontend/__tests__`. Para roda-los basta abrir a pasta `frontend` no terminal e executar o seguinte comando:
+
+```
+yarn test
+```
+
+Também é possível gerar um coverage report rodando o seguinte comando:
+
+```
+yarn test:coverage
+```
+
+Após rodar o coverage, será criada a pasta `fronten/coverage`. Para poder analizar os relatórios que mostram todas as linhas de código que os testes cobram, basta abrir o arquivo `frontend/coverage/lcov-report/index.html` em seu navegador.
