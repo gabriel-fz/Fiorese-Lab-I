@@ -3,16 +3,25 @@ import { FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 
 import pizzaImg from '../../assets/pizza.svg';
+import sucoImg from '../../assets/suco.svg';
+import refrigeranteImg from '../../assets/refrigerante.svg';
 import Header from '../../components/Header';
 
 import { Card, Badge, LinkComment } from './styles';
 
 interface EntidadesProps {
   id: number;
+  type: 'pizza' | 'suco' | 'refrigerante';
   nome: string;
   positivos: string;
   negativos: string;
 }
+
+const imagesCards = {
+  pizza: pizzaImg,
+  refrigerante: refrigeranteImg,
+  suco: sucoImg,
+};
 
 const Dashboard: React.FC = () => {
   const [entidades, setEntidades] = useState<EntidadesProps[]>([]);
@@ -32,7 +41,7 @@ const Dashboard: React.FC = () => {
 
       {entidades.map(entidade => (
         <Card key={entidade.id}>
-          <img src={pizzaImg} alt="pizza" />
+          <img src={imagesCards[entidade.type]} alt={entidade.type} />
           <strong>{entidade.nome}</strong>
 
           <div>
