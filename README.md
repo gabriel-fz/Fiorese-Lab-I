@@ -23,9 +23,7 @@ Imagine que em um aplicativo de delivery, a pessoa pede apenas uma pizza e depoi
 
 Porém, imagine agora que a pessoa pediu uma pizza de calabresa, uma pizza portuguesa e um refrigerante, e avaliou o pedido com uma estrela e com o seguinte comentário:
 
-```
-A pizza de calabresa e a pizza de  portuguesa estavam ótimas, não é atoa que são as minhas preferidas dessa pizzaria. Porém, odiei que os refrigerantes tenham vindo com as latas todas amassadas. Essa pizzaria precisa rever os cuidados que estão tendo com seus produtos!
-```
+_"A pizza de calabresa e a pizza de portuguesa estavam ótimas, não é atoa que são as minhas preferidas dessa pizzaria. Porém, odiei que os refrigerantes tenham vindo com as latas todas amassadas. Essa pizzaria precisa rever os cuidados que estão tendo com seus produtos!"_
 
 Ao ler o comentário, podemos observar que a pessoa elogiou as pizzas e criticou o refrigerante, o que fez com que ela avaliasse com apenas uma estrela o pedido. Até aí tudo bem, pois só se trata de uma avaliação, porém, quando há um número muito grande de pedidos é inviável ler todos de modo com que seja necessário automatizar esse processo. Para isso então, surge a solução a segui:
 
