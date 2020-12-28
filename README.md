@@ -23,13 +23,32 @@ Imagine que em um aplicativo de delivery, a pessoa pede apenas uma pizza e depoi
 
 Porém, imagine agora que a pessoa pediu uma pizza de calabresa, uma pizza portuguesa e um refrigerante, e avaliou o pedido com uma estrela e com o seguinte comentário:
 
-_"A pizza de calabresa e a pizza de portuguesa estavam ótimas, não é atoa que são as minhas preferidas dessa pizzaria. Porém, odiei que os refrigerantes tenham vindo com as latas todas amassadas. Essa pizzaria precisa rever os cuidados que estão tendo com seus produtos!"_
+_"A pizza de calabresa e a pizza portuguesa estavam ótimas, não é atoa que são as minhas preferidas dessa pizzaria. Porém, odiei que os refrigerantes tenham vindo com as latas todas amassadas. Essa pizzaria precisa rever os cuidados que estão tendo com seus produtos!"_
 
-Ao ler o comentário, podemos observar que a pessoa elogiou as pizzas e criticou o refrigerante, o que fez com que ela avaliasse com apenas uma estrela o pedido. Até aí tudo bem, pois só se trata de uma avaliação, porém, quando há um número muito grande de pedidos é inviável ler todos de modo com que seja necessário automatizar esse processo. Para isso então, surge a solução a segui:
+Ao ler o comentário, podemos observar que a pessoa elogiou as pizzas e criticou o refrigerante, o que fez com que ela avaliasse com apenas uma estrela o pedido. Até aí tudo bem, pois só se trata de uma avaliação e uma pessoa consegue ler sem esforço. Porém, quando há um número muito grande de avaliações é inviável ler todos os comentários, de modo com que seja necessário automatizar esse processo. Para isso então, surge a solução a seguir:
 
 ### A solução
 
-Neste projeto eu criei uma api com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED para analisar comentários de avalizações de aplicativos de delivery, onde busco sobre quais itens a pessoa elogiou e criticou. Ao final, crio um projeto em React para poder enviar comentários, mostrar todos os itens que foram mais elogiados e mais criticados, e todos os comentários então feitos. Com isso então, é possível analisar quantidades enormes de comentários de maneira automática e sem precisar de nenhum esforço humano.
+Neste projeto eu criei uma API com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED para analisar comentários de avalizações de aplicativos de delivery, onde busco sobre quais itens a pessoa elogiou e criticou. Ao final, crio um projeto em React para poder enviar comentários, mostrar todos os itens que foram mais elogiados e mais criticados, e todos os comentários então feitos. Sendo assim, um simples comentário como o do exemplo acima poderia ser enviado para a API, analisado e transformado em:
+
+```
+[
+  {
+    item: "Pizza de calabresa",
+    sentimento: "positivo"
+  },
+  {
+    item: "Pizza portuguesa",
+    sentimento: "positivo"
+  },
+  {
+    item: "Refrigerante",
+    sentimento: "negativo"
+  },
+]
+```
+
+Com isso então, é possível analisar quantidades enormes de comentários de maneira automática e sem precisar de nenhum esforço humano.
 
 ## :rocket: Esboço do projeto
 
