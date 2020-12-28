@@ -19,4 +19,13 @@ export const Container = styled.div`
     text-decoration: none;
     color: #a8a8b3;
   }
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+  }
 `;

@@ -11,7 +11,7 @@ import { Card, Badge, LinkComment } from './styles';
 
 interface EntidadesProps {
   id: number;
-  type: 'pizza' | 'suco' | 'refrigerante';
+  tipo: 'pizza' | 'suco' | 'refrigerante';
   nome: string;
   positivos: string;
   negativos: string;
@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
 
       {entidades.map(entidade => (
         <Card key={entidade.id}>
-          <img src={imagesCards[entidade.type]} alt={entidade.type} />
+          <img src={imagesCards[entidade.tipo]} alt={entidade.tipo} />
           <strong>{entidade.nome}</strong>
 
           <div>
