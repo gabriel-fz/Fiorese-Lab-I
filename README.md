@@ -17,7 +17,7 @@
 
 Os Labs tem como intuito principal a diversão através da programação e a prática de tudo o que eu aprendo sobre desenvolvimento no dia a dia. Para isso, imagino possíveis problemas que seriam legais de resolver, como o problema a seguir:
 
-### O problema
+### :warning: O problema
 
 Imagine que em um aplicativo de delivery, a pessoa pede apenas uma pizza e depois avalia com apenas uma estrela. Podemos presumir então que a pessoa não gostou da pizza, já que foi a única coisa que ela pediu.
 
@@ -27,7 +27,7 @@ _"A pizza de calabresa e a pizza portuguesa estavam ótimas, não é atoa que s�
 
 Ao ler o comentário, podemos observar que a pessoa elogiou as pizzas e criticou o refrigerante, o que fez com que ela avaliasse com apenas uma estrela o pedido. Até aí tudo bem, pois só se trata de uma avaliação e uma pessoa consegue ler sem esforço. Porém, quando há um número muito grande de avaliações é inviável ler todos os comentários, de modo com que seja necessário automatizar esse processo. Para isso então, surge a solução a seguir:
 
-### A solução
+### :heavy_check_mark: A solução
 
 Neste projeto eu criei uma API com Watson Knowledge Studio, Watson Natural Language Understanding e Node-RED para analisar comentários de avalizações de aplicativos de delivery, onde busco sobre quais itens a pessoa elogiou e criticou. Ao final, crio um projeto em React para poder enviar comentários, mostrar todos os itens que foram mais elogiados e mais criticados, e todos os comentários então feitos. Sendo assim, um simples comentário como o do exemplo acima poderia ser enviado para a API, analisado e transformado em:
 
