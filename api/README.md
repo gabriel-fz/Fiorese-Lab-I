@@ -35,7 +35,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 
 É muito importante ter bastante atenção nos nomes das rotas e nos JSONs que elas recebem ou enviam, pois isso pode gerar erro na página do frantend.
 
-**[POST] /comentar** recebe o JSON no seguinte formato:
+**[POST] /comentar** recebe um JSON no seguinte formato:
 
 ```
 {
@@ -43,7 +43,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 }
 ```
 
-**[GET] /entidade-texto** retorna o JSON no seguinte formato:
+**[GET] /entidade-texto** retorna um array no seguinte formato:
 
 ```
 [
@@ -74,7 +74,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 ]
 ```
 
-**[GET] /apenas-entidade** retorna o JSON no seguinte formato:
+**[GET] /apenas-entidade** retorna um array no seguinte formato:
 
 ```
 [
@@ -109,4 +109,4 @@ Todos os vídeos à seguir foram retirados do [canal do Sérgio Gama](https://ww
 - [How to read IoT Data using MQTT on Node-Red, and consume it on Jupyter Notebook with Pandas on CP4D](https://www.youtube.com/watch?v=yT_DIEu6uzA&t=1121s&ab_channel=SergioGama)
 - [Creating a custom model on WKS and deploy it to NLU, use it thru API on Node-red and Cloud Functions](https://www.youtube.com/watch?v=Nqyd5rJ0KJU&t=1599s&ab_channel=SergioGama)
 - [Criando Rest API Post no Node-red, multipart recebendo arquivo, e testando no Postman](https://www.youtube.com/watch?v=QQt9lZF4SQQ&t=327s&ab_channel=SergioGama)
-- [https://www.youtube.com/watch?v=UyPVl7epAnU&t=87s&ab_channel=SergioGama](https://www.youtube.com/watch?v=UyPVl7epAnU&t=87s&ab_channel=SergioGama)
+- [API in Node-Red to receive an audio, convert to text & send to Watson Natural Language Understanding](https://www.youtube.com/watch?v=UyPVl7epAnU&t=87s&ab_channel=SergioGama)
