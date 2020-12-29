@@ -2,12 +2,12 @@
   Criando a API
 </h2>
 
-- [1. Treinando o watson](#treinando-o-watson)
-- [2. Criando a API com Node-RED](#criando-a-api-com-node-red)
-  - [2.1. Rotas que a API necessita ter](#rotas-que-a-api-necessita-ter)
-- [3. Videos de material de apoio](#videos-de-material-de-apoio)
+- [1. Treinando o watson](#memo-treinando-o-watson)
+- [2. Criando a API com Node-RED](#computer-criando-a-api-com-node-red)
+  - [2.1. Rotas que a API necessita ter](#arrow-upper-right-rotas-que-a-api-necessita-ter)
+- [3. Videos de material de apoio](#arrow-forward-videos-de-material-de-apoio)
 
-## Treinando o watson
+## :memo: Treinando o watson
 
 O primeiro passo para a criação da API é o treinamento do Watson. Para isso, assista os vídeos do material de apoi e utilize o arquivo [frases.txt](https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/api/frases.txt) presente na pasta `api` para poder treinar um modelo no Watson Knowledge Studio, de modo que ele reconheça as seguintes entidades:
 
@@ -27,11 +27,11 @@ O primeiro passo para a criação da API é o treinamento do Watson. Para isso, 
 
 Com um modelo criado, siga os próximos passos.
 
-## Criando a API com Node-RED
+## :computer: Criando a API com Node-RED
 
 Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se conecta ao modelo treinado no Watson Knowledge Studio e salva todos os dados no cloudant. Vale ressaltar que a API necessita ter as seguintes rotas:
 
-### Rotas que a API necessita ter
+### :arrow_upper_right: Rotas que a API necessita ter
 
 É muito importante ter bastante atenção nos nomes das rotas e nos JSONs que elas recebem ou enviam, pois isso pode gerar erro na página do frantend.
 
@@ -116,7 +116,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 ]
 ```
 
-## Videos de material de apoio
+## :arrow_forward: Videos de material de apoio
 
 Todos os vídeos à seguir foram retirados do [canal do Sérgio Gama](https://www.youtube.com/c/SergioGama/featured), e neles é mostrado de forma prática como treinar modelos costumizados no WKS e como criar e usar uma api no Node-RED:
 
