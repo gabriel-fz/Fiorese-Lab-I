@@ -9,7 +9,7 @@
 
 ## Treinando o watson
 
-O primeiro passo para a criação da API é o treinamento do Watson. Para isso, assista os vídeos do material de apoi e utilize o arquivo `frases.txt` para poder treinar um modelo no Watson Knowledge Studio, de modo que ele reconheça as seguintes entidades:
+O primeiro passo para a criação da API é o treinamento do Watson. Para isso, assista os vídeos do material de apoi e utilize o arquivo [frases.txt](https://github.com/gabriel-fz/Fiorese-Lab-I/blob/master/api/frases.txt) presente na pasta `api` para poder treinar um modelo no Watson Knowledge Studio, de modo que ele reconheça as seguintes entidades:
 
 <div align="center">
 
@@ -35,7 +35,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 
 É muito importante ter bastante atenção nos nomes das rotas e nos JSONs que elas recebem ou enviam, pois isso pode gerar erro na página do frantend.
 
-**[POST] /comentar** recebe um JSON no seguinte formato:
+**[POST] /comentar** recebe um JSON como comentário no seguinte formato:
 
 ```
 {
@@ -43,7 +43,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 }
 ```
 
-**[GET] /entidade-texto** retorna um array no seguinte formato:
+**[GET] /entidade-texto** retorna um array com todos os comentários do banco de dados no seguinte formato:
 
 ```
 [
@@ -74,7 +74,7 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
 ]
 ```
 
-**[GET] /apenas-entidade** retorna um array no seguinte formato:
+**[GET] /apenas-entidade** retorna um array com a quantidade de comentários positivos e negativos de cada entidade, no seguinte formato:
 
 ```
 [
@@ -82,22 +82,36 @@ Seguindo os vídeos do material de apoio, crie uma API com o Node-RED que se con
     "id": 1,
     "nome": "Pizza de Calabresa",
     "tipo": "pizza",
-    "positivos": 2,
-    "negativos": 2
+    "positivos": (numero),
+    "negativos": (numero)
   },
   {
     "id": 2,
     "nome": "Pizza de Frango com Catupiry",
     "tipo": "pizza",
-    "positivos": 2,
-    "negativos": 2
+    "positivos": (numero),
+    "negativos": (numero)
   },
   {
     "id": 3,
     "nome": "Pizza Portuguesa",
     "tipo": "pizza",
-    "positivos": 1,
-    "negativos": 2
+    "positivos": (numero),
+    "negativos": (numero)
+  },
+  {
+    "id": 4,
+    "nome": "Suco",
+    "tipo": "suco",
+    "positivos": (numero),
+    "negativos": (numero)
+  },
+  {
+    "id": 5,
+    "nome": "Refrigerante",
+    "tipo": "refrigerante",
+    "positivos": (numero),
+    "negativos": (numero)
   }
 ]
 ```
